@@ -12,7 +12,7 @@ struct Secteur {
 struct NiveauCrise {
   const char* nom;
   float ratio;
-  int intervalleLed;   // ms entre chaque changement d'état de la LED d'alerte
+  int intervalleLed;
 };
 
 const int NB_SECTEURS = 6;
@@ -59,12 +59,12 @@ Keypad pad = Keypad(makeKeymap(touches), pinsLignes, pinsColonnes, NB_LIGNES, NB
 
 // --- Capteur de luminosité ---
 const int PIN_LUMIERE = 35;
-const int SEUIL_LUMIERE = 1500;    // À AJUSTER selon tes valeurs mesurées : en dessous = pas assez de lumière
-const int PIN_LED_ECLAIRAGE = 19;  // LED flash 7 couleurs : cycle les couleurs automatiquement, pas de PWM nécessaire, HIGH = allumée à pleine puissance (3.3V)
+const int SEUIL_LUMIERE = 1500;    // À AJUSTER selon les valeurs mesurées : en dessous = pas assez de lumière
+const int PIN_LED_ECLAIRAGE = 19;  // LED flash 7 couleurs HIGH = allumée à pleine puissance (3.3V)
 
 // --- Capteur de niveau d'eau / humidité du sol ---
 const int PIN_HUMIDITE_SOL = 34;
-const int SEUIL_HUMIDITE_SOL = 1500;   // À AJUSTER selon tes valeurs mesurées : en dessous = manque d'eau
+const int SEUIL_HUMIDITE_SOL = 1500;   // À AJUSTER selon les valeurs mesurées : en dessous = manque d'eau
 
 // --- Servo (trappe d'eau) ---
 const int PIN_SERVO = 18;
